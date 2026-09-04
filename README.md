@@ -37,13 +37,21 @@ RaceDay is a comprehensive event management system designed for race organizers 
 
 ## Project Structure
 RaceDay-Project-1-/
+
 ├── docs/
+
 │ ├── ERDPROG.png
+
 │ ├── API_Endpoint_Plan.md
+
 │ └── RaceDay_Schema.sql
+
 ├── .github/workflows/
+
 │ └── validate-docs.yml
+
 ├── .gitignore
+
 └── README.md
 
 
