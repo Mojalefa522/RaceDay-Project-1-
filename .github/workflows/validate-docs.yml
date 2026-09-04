@@ -23,7 +23,7 @@ jobs:
     
     - name: Check required files exist
       run: |
-        required_files=("ERD.png" "API_Endpoint_Plan.md" "RaceDay_Schema.sql")
+        required_files=("ERDPROG" "API_Endpoint_Plan.md" "RaceDay_Schema.sql")
         for file in "${required_files[@]}"; do
           if [ ! -f "docs/$file" ]; then
             echo "Missing required file: docs/$file"
