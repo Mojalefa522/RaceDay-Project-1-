@@ -190,3 +190,12 @@ JOIN EventEnrolments e ON r.EnrolmentID = e.EnrolmentID
 JOIN Users u ON e.ParticipantID = u.UserID
 JOIN Categories c ON e.CategoryID = c.CategoryID
 JOIN Events ev ON c.EventID = ev.EventID;
+
+-- VERIFICATION QUERIES
+PRINT '=== DATABASE CREATED SUCCESSFULLY ===';
+SELECT 'Roles' AS TableName, COUNT(*) AS RowCount FROM Roles;
+SELECT 'Users' AS TableName, COUNT(*) AS RowCount FROM Users;
+SELECT 'Events' AS TableName, COUNT(*) AS RowCount FROM Events;
+SELECT 'Categories' AS TableName, COUNT(*) AS RowCount FROM Categories;
+SELECT 'EventEnrolments' AS TableName, COUNT(*) AS RowCount FROM EventEnrolments;
+SELECT 'Results' AS TableName, COUNT(*) AS RowCount FROM Results;
