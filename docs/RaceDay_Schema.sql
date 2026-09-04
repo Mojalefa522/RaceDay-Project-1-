@@ -160,3 +160,33 @@ SELECT 'Events' AS TableName, COUNT(*) AS RowCount FROM Events;
 SELECT 'Categories' AS TableName, COUNT(*) AS RowCount FROM Categories;
 SELECT 'Enrolments' AS TableName, COUNT(*) AS RowCount FROM EventEnrolments;
 SELECT 'Results' AS TableName, COUNT(*) AS RowCount FROM Results;
+GO
+CREATE VIEW vw_EventEnrolments AS
+SELECT 
+    e.EnrolmentID,
+    ev.Name AS EventName,
+    c.Name AS CategoryName,
+    u.FullName AS ParticipantName,
+    e.Status AS EnrolmentStatus,
+    e.BibNumber,
+    e.EnrolmentDate
+FROM EventEnrolments e
+JOIN Categories c ON e.CategoryID = c.CategoryID
+JOIN Events ev ON c.EventID = ev.EventID
+JOIN Users u ON e.ParticipantID = u.UserID;
+
+GO
+CREATE VIEW vw_EventResults AS
+SELECT 
+    r.ResultID,
+    u.FullName AS ParticipantName,
+    ev.Name AS EventName,
+    c.Name AS CategoryName,
+    r.FinishTime,
+    r.Position,
+    r.Status AS ResultStatus
+FROM Results r
+JOIN EventEnrolments e ON r.EnrolmentID = e.EnrolmentID
+JOIN Users u ON e.ParticipantID = u.UserID
+JOIN Categories c ON e.CategoryID = c.CategoryID
+JOIN Events ev ON c.EventID = ev.EventID;
