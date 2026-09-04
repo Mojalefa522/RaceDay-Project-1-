@@ -58,5 +58,5 @@ RaceDay-Project-1-/
 ## Submission Information
 - **Student Name:** Mojalefa Kabelo
 - **Student ID:** ST10496962
-- **Course:** DIS 1
+- **Course:** Diploma In Software Development 1
 - **Date:** 25 August 2026
