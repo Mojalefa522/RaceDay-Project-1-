@@ -19,7 +19,7 @@ RaceDay is a comprehensive event management system designed for race organizers 
 - Can view results for events they participated in
 - Can update their profile information
 
-## CI/CD Status
+
 ## CI/CD Status
 
 ![CI/CD Build Passing](CI-CD.png)
