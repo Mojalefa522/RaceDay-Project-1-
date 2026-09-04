@@ -1,0 +1,44 @@
+# Visual Studio / VS Code
+.vscode/
+.vs/
+*.swp
+*.swo
+*.user
+*.suo
+
+# Database Files
+*.mdf
+*.ldf
+*.bak
+*.log
+*.ndf
+Database/
+Data/
+
+# Operating System Files
+Thumbs.db
+.DS_Store
+desktop.ini
+*~
+*.swp
+
+# Environment Files
+.env
+.env.local
+*.log
+
+# Build Outputs
+bin/
+obj/
+Debug/
+Release/
+build/
+dist/
+out/
+
+# IDE Specific
+.idea/
+*.iml
+.classpath
+.project
+.settings/
