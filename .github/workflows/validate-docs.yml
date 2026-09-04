@@ -1,0 +1,44 @@
+name: Validate Repository Structure
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Check docs folder exists
+      run: |
+        if [ ! -d "docs" ]; then
+          echo "docs folder not found!"
+          exit 1
+        fi
+        echo "docs folder exists"
+    
+    - name: Check required files exist
+      run: |
+        required_files=("ERD.png" "API_Endpoint_Plan.md" "RaceDay_Schema.sql")
+        for file in "${required_files[@]}"; do
+          if [ ! -f "docs/$file" ]; then
+            echo "Missing required file: docs/$file"
+            exit 1
+          fi
+          echo "$file found"
+        done
+    
+    - name: Check README exists
+      run: |
+        if [ ! -f "README.md" ]; then
+          echo "README.md not found"
+          exit 1
+        fi
+        echo "README.md found"
+    
+    - name: Success message
+      run: echo "All validation checks passed!"
