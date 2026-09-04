@@ -20,6 +20,10 @@ RaceDay is a comprehensive event management system designed for race organizers 
 - Can update their profile information
 
 ## CI/CD Status
+## CI/CD Status
+
+![CI/CD Build Passing](CI-CD.png)
+
 [![Validate Repository Structure](https://github.com/Mojalefa522/RaceDay-Project-1-/actions/workflows/validate-docs.yml/badge.svg)](https://github.com/Mojalefa522/RaceDay-Project-1-/actions/workflows/validate-docs.yml)
 
 ## YouTube Walkthrough
