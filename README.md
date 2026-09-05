@@ -27,6 +27,8 @@ RaceDay is a comprehensive event management system designed for race organizers 
 [![Validate Repository Structure](https://github.com/Mojalefa522/RaceDay-Project-1-/actions/workflows/validate-docs.yml/badge.svg)](https://github.com/Mojalefa522/RaceDay-Project-1-/actions/workflows/validate-docs.yml)
 
 ## YouTube Walkthrough
+link to the YouTube video
+https://youtu.be/63L_DGlgiw8
 ## Database Setup Instructions
 
 1. Open SQL Server Management Studio (SSMS)
